@@ -1,0 +1,12 @@
+*.txt
+
+*.~pas
+*.~dpr
+
+*.res
+*.rc
+*.dcu
+*.dof
+
+*.asi
+*.dll
