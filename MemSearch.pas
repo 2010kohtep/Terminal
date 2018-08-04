@@ -1410,19 +1410,25 @@ asm
 @Good1:
  mov edi, eax
 
- push esp
- push esp
+ push esp // allocate space for oldProtect variable
+ 
+ push esp // &oldProtect
  push PAGE_EXECUTE_READWRITE
- push 1
+ push type Byte
  push edi
  call VirtualProtect
 
  mov byte ptr [edi], 0EBh
 
- push [esp]
- push 1
+ mov eax, dword ptr [esp] // move oldProtect value to EAX
+ 
+ push esp
+ push eax
+ push type Byte
  push edi
  call VirtualProtect
+ 
+ pop eax // remove oldProtect value from stack
 
  pop edi
 end;

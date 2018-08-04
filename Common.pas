@@ -272,7 +272,7 @@ type
    Len: LongInt;
  end;
 const
- BadCmdPrefixes: array[0..17] of TCmd =
+ BadCmdPrefixes: array[0..16] of TCmd =
  (
   (Cmd: '_'; Len: 1),
   (Cmd: 'gl_'; Len: 3),
@@ -289,7 +289,6 @@ const
   (Cmd: 'sys_'; Len: 4),
   (Cmd: 'motd'; Len: 4),
   (Cmd: 'con_'; Len: 4),
-  (Cmd: 'vgui_'; Len: 5),
   (Cmd: 'net_'; Len: 4),
   (Cmd: nil; Len: 0)
  );

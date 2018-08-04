@@ -53,7 +53,7 @@ asm
 end;
 
 procedure FindAllStuff;
-asm
+asm 
  call Find_UserMsgBase
  call Find_SVCBase
  call Find_MSGInterface
